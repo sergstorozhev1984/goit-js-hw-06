@@ -3,7 +3,7 @@ const count = document.querySelector('#value');
 
 const btnIncrement = document.querySelector('[data-action="increment"]');
 const onBtnIncrementClick = () => {
-    return count.textContent = counterValue++;
+    return count.textContent = ++counterValue;
 }
 btnIncrement.addEventListener("click", onBtnIncrementClick);
 
