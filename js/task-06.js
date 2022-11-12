@@ -1,9 +1,9 @@
-const getEl = (x) => document.querySelector(x);
+const getEl = x => document.querySelector(x);
 const inputEl = getEl('input');
-const inputDataLength = getEl('[data-length]').dataset.length
-// console.dir(inputDataLength);
-inputEl.addEventListener('change', (event) => {
-    if (event.currentTarget.value.length > inputDataLength) {
+
+inputEl.addEventListener('blur', (event) => {
+    // console.log(event.target.value.length);
+    if (event.target.value.length !== +inputEl.dataset.length) {
         return inputEl.classList.add('invalid');
     }
     inputEl.classList.remove('invalid');

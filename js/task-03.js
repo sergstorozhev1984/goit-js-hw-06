@@ -14,14 +14,14 @@ const images = [
 ];
 const gallery = document.querySelector('.gallery');
 
-function createGallery() {
-  const galleryEl = images.map(el => `<li><img class='Photo' src = '${el.url}' alt = '${el.alt}' width = '500'></li>`).join('');
+function createMarkupGallery() {
+  const galleryEl = images.map(el => `<li><img class='Photo' src = '${el.url}' alt = '${el.alt}'></li>`).join('');
 
   gallery.insertAdjacentHTML('beforeend', galleryEl);
   return gallery;
 }
-gallery.style.display = 'flex';
-gallery.style.justifyContent = 'center';
-gallery.style.gap = '70px';
-gallery.style.listStyle = 'none';
-console.log(createGallery(images));
+// gallery.style.display = 'flex';
+// gallery.style.justifyContent = 'space-evenly';
+// gallery.style.gap = '30px';
+// gallery.style.listStyle = 'none';
+console.log(createMarkupGallery(images));
