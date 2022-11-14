@@ -18,10 +18,10 @@ function createMarkupGallery() {
   const galleryEl = images.map(el => `<li><img class='Photo' src = '${el.url}' alt = '${el.alt}'></li>`).join('');
 
   gallery.insertAdjacentHTML('beforeend', galleryEl);
-  return gallery;
+  // return gallery;
 }
+createMarkupGallery(images);
 // gallery.style.display = 'flex';
 // gallery.style.justifyContent = 'space-evenly';
 // gallery.style.gap = '30px';
 // gallery.style.listStyle = 'none';
-console.log(createMarkupGallery(images));
